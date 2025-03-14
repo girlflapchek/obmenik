@@ -1,0 +1,25 @@
+.preloader
+    position: fixed
+    display: flex
+    align-items: center
+    justify-content: center
+    left: 0
+    top: 0
+    width: 100%
+    height: 100vh
+    background: #060606
+    z-index: 15
+    &__circle
+        width: 60px
+        height: 60px
+        border: 2px solid #FFFFFF
+        border-right: 2px solid transparent
+        border-left: 2px solid transparent
+        border-radius: 100%
+        animation: preloaderCircle .5s linear infinite
+
+@keyframes preloaderCircle
+    0%
+        transform: rotate(0deg)
+    100%
+        transform: rotate(360deg)

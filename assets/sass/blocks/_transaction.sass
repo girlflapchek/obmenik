@@ -1,0 +1,222 @@
+.transaction
+    padding-top: 100px
+    min-height: 100vh
+    display: flex
+    align-items: center
+    justify-content: center
+    &__title
+        color: #FFFFFF
+        font-weight: 600
+        font-size: 32px
+        line-height: 120%
+        text-align: center
+        letter-spacing: 0.02em
+    &__order
+        margin-top: 30px
+        color: #BEBDBD
+        font-weight: 600
+        font-size: 24px
+        line-height: 100%
+        text-align: center
+        letter-spacing: 0.02em
+    &__btns
+        margin-top: 40px
+        display: flex
+        align-items: center
+        justify-content: center
+    &__btn
+        padding: 14px 0
+        width: 210px
+        display: flex
+        align-items: center
+        justify-content: center
+        color: #0085FF
+        font-weight: 500
+        font-size: 22px
+        line-height: 100%
+        letter-spacing: 0.02em
+        background: rgba(0, 133, 255, 0.32)
+        backdrop-filter: blur(8px)
+        border-radius: 15px
+        transition: opacity .3s ease
+        img
+            margin-right: 10px
+        &:hover
+            color: #0085FF
+            opacity: .7
+        &-search
+            margin-left: 16px
+            width: 250px
+            background: #0085FF
+            color: #FFFFFF
+            &:hover
+                color: #FFFFFF
+    &-1
+        margin: 50px auto 0 auto
+        width: 820px
+        display: flex
+        align-items: start
+        justify-content: space-between
+    &-2, &-3, &-4
+        position: relative
+        margin-top: 25px
+        padding: 38px
+        border-radius: 15px
+        background: #101010
+        overflow: hidden
+    &-2
+        &::before
+            content: ''
+            position: absolute
+            width: 100px
+            height: 100px
+            left: -100px
+            top: 0
+            background: #00FFA3
+            filter: blur(150px)
+        &::after
+            content: ''
+            position: absolute
+            right: 0
+            top: -25px
+            width: 240px
+            height: 193px
+            background: url('../../assets/img/transaction/success.png') center center no-repeat
+    &-3
+        &::before
+            content: ''
+            position: absolute
+            width: 100px
+            height: 100px
+            left: -100px
+            top: 0
+            background: #FF0000
+            filter: blur(150px)
+        &::after
+            content: ''
+            position: absolute
+            right: 0
+            top: -25px
+            width: 240px
+            height: 193px
+            background: url('../../assets/img/transaction/error.png') center center no-repeat
+    &-4
+        &-3
+        &::before
+            content: ''
+            position: absolute
+            width: 100px
+            height: 100px
+            left: -100px
+            top: 0
+            background: #0085FF
+            filter: blur(150px)
+        &::after
+            content: ''
+            position: absolute
+            right: 0
+            top: -25px
+            width: 240px
+            height: 193px
+            background: url('../../assets/img/transaction/wait.png') center center no-repeat
+    &__status
+        font-weight: 500
+        font-size: 18px
+        line-height: 100%
+        letter-spacing: 0.02em
+        &_green
+            color: #00FFA3
+        &_red
+            color: #FF0000
+        &_blue
+            color: #0085FF
+        &-text
+            padding-right: 135px
+            margin-top: 20px
+            color: #FFFFFF
+            font-weight: 600
+            font-size: 24px
+            line-height: 100%
+            letter-spacing: 0.02em
+    &__block
+        width: 400px
+        padding: 30px
+        background: #101010
+        border-radius: 10px
+        &-title
+            color: #FFFFFF
+            font-weight: 500
+            font-size: 18px
+            line-height: 100%
+            text-align: center
+            letter-spacing: 0.02em
+        &-wrapper
+            margin-top: 25px
+            display: flex
+            align-items: center
+            justify-content: space-between
+        &-text
+            color: #FFFFFF
+            font-weight: 500
+            font-size: 14px
+            line-height: 120%
+            letter-spacing: 0.02em
+        &-input
+            display: block
+            padding: 8px 110px 8px 20px
+            color: #0085FF
+            font-weight: 500
+            font-size: 14px
+            line-height: 100%
+            letter-spacing: 0.02em
+            width: 100%
+            background: transparent
+            border: none
+            outline: none
+            border-bottom: 1px solid #3A3A3A
+            &-wrapper
+                position: relative
+                margin-top: 15px
+            &-img
+                position: absolute
+                left: 0
+                top: 50%
+                transform: translate(0, -50%)
+            &-copy
+                position: absolute
+                right: 0
+                top: 50%
+                transform: translate(0, -50%)
+                color: #3A3A3A
+                font-weight: 500
+                font-size: 14px
+                line-height: 100%
+                letter-spacing: 0.02em
+                cursor: pointer
+                transition: opacity .3s ease, color .3s ease
+                &:hover
+                    opacity: .7
+                &:active
+                    color: #00FFA3
+        &-btn
+            margin-top: 27px
+            padding: 12px 0
+            display: block
+            text-align: center
+            width: 100%
+            color: #FFFFFF
+            font-weight: 500
+            font-size: 14px
+            line-height: 100%
+            letter-spacing: 0.02em
+            background: #007EDA
+            border-radius: 5px
+            transition: opacity .3s ease
+            &:hover
+                color: #FFFFFF
+                opacity: .7
+        &-qr
+            margin-top: 25px
+            text-align: center
+            img
+                border-radius: 5px

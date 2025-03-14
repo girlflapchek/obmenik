@@ -1,0 +1,79 @@
+.transactions
+    padding: 120px 0
+    &__title
+        display: flex
+        align-items: center
+        justify-content: center
+        color: #FFFFFF
+        font-weight: 700
+        font-size: 35px
+        line-height: calc(42 / 35 * 100%)
+        &-circle
+            margin-left: 10px
+            display: flex
+            align-items: center
+            justify-content: center
+            width: 20px
+            height: 20px
+            background: rgba(0, 133, 255, 0.4)
+            border-radius: 100%
+            animation: transactionsCircle 2s linear infinite
+            span
+                display: block
+                width: 10px
+                height: 10px
+                background: #0085FF
+                border-radius: 100%
+    &__table
+        width: 100%
+        min-width: 1000px
+        &-wrapper
+            margin-top: 90px
+            overflow: auto
+    &__tr
+        margin-top: 16px
+        padding: 60px 30px
+        display: flex
+        align-items: center
+        justify-content: space-between
+        background: #101010
+        border-radius: 25px
+        position: relative
+        &::before
+            content: ''
+            position: absolute
+            top: 50%
+            left: 48%
+            transform: translate(0, -50%)
+            width: 35px
+            height: 35px
+            border-radius: 100%
+            background: url('../../assets/img/transactions/success.svg') center center no-repeat
+        &-header
+            margin-bottom: 22px
+            padding: 24px 30px
+            display: flex
+            align-items: center
+            justify-content: space-between
+            background: #0085FF
+            border-radius: 10px
+    &__th
+        color: #FFFFFF
+        font-weight: 600
+        font-size: 18px
+        line-height: calc(22 / 18 * 100%)
+    &__td
+        color: #FFFFFF
+        font-weight: 600
+        font-size: 18px
+        line-height: calc(22 / 18 * 100%)
+        &_blue
+            color: #0085FF
+
+@keyframes transactionsCircle
+    0%
+        opacity: .5
+    50%
+        opacity: 1
+    100%
+        opacity: .5
